@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from map_converter.views import convert_image_to_map
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('convert/', convert_image_to_map, name='convert_image_to_map'),
 ]
+
